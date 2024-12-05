@@ -33,10 +33,37 @@ fn main() {
 
 
     //Strings
-    let greeting: String = String::from("Hello RS.");
+    let greeting= String::from("Hello RS.");
     println!("{}", greeting);
     
 
     //For some Advance stuff in Rust viw russt official docs and Pattern Matching
 
+
+    //Conditionals and Loops and functions
+    for i in 0..11 {
+        print!("{} ", i);
+    }
+
+    let sentence= String::from("Hello Om!");
+    let first_word = get_first_word(sentence);
+    println!("First Word is: {}", first_word);
+
+    //Simple iterations
+    let x: i8 = 51;
+    for i in 0..x {
+        println!("{}", i);
+    }
+
+}
+
+fn get_first_word(sentence: String) -> String {  //The arrow indicates the return type
+    let mut ans: String = String::from("");
+    for char in sentence.chars() {
+        ans.push_str(char.to_string().as_str());
+        if char == ' ' {  //Dont use double quotes here as it is a char and not a string
+            break;
+        }
+    }
+    return ans;
 }
