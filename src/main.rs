@@ -1,5 +1,3 @@
-use std::future::pending;
-
 fn main() {
     println!("Hello, Rust!");
 
